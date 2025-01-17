@@ -1,0 +1,151 @@
+.about-us-container {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f9f9f9, #e4efff); /* Light gradient background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.about-header p {
+    font-size: 1.3rem;
+    color: #7f8c8d;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section,
+.team-section,
+.contact-section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #2980b9; /* Accent blue */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #34495e;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 30%;
+    text-align: center;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.team-member img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #2980b9; /* Accent border */
+    transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+    transform: scale(1.1);
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+.contact-section {
+    background-color: #f1f1f1;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h3 {
+    font-size: 2rem;
+    color: #2980b9;
+    margin-bottom: 20px;
+}
+
+.contact-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-section li {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-content {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .contact-section {
+        padding: 30px;
+    }
+}
