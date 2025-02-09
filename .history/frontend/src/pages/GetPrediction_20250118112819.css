@@ -1,0 +1,135 @@
+.insurance-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 500px;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.insurance-form-container h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    color: #00796b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #004d40;
+}
+
+form input,
+form select {
+    padding: 0.75rem;
+    border: 1px solid #004d40;
+    border-radius: 6px;
+    flex: 1;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #00796b;
+}
+
+.error {
+    color: #d32f2f;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+button {
+    background: linear-gradient(135deg, #00796b, #004d40);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #004d40, #00796b);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: linear-gradient(135deg, #b2dfdb, #80cbc4);
+}
+
+.prediction-result {
+    margin-top: 1.5rem;
+    border: 1px solid #004d40;
+    background: #e0f7fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.prediction-result h3 {
+    color: #004d40;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.prediction-result p {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #00796b;
+}
+.download-report-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-report-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .download-report-btn:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+  }
+  
