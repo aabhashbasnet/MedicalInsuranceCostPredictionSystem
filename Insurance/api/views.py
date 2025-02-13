@@ -40,82 +40,12 @@ def predict(request):
             return Response({"error": "Invalid input data", "details": serializer.errors}, status=400)
 
 
-# from django.http import JsonResponse
-# from sklearn.feature_extraction.text import TfidfVectorizer
-# from sklearn.metrics.pairwise import cosine_similarity
 
-# # Predefined responses and corresponding answers
-# responses = {
-#     "Hi": "Hello! How can I assist you with insurance-related queries today?",
-#     "Does smoking affect my insurance costs?": "Yes, smoking significantly impacts your insurance cost. Smokers are at a higher risk of developing health issues, leading to increased medical expenses. Insurance providers consider this risk when calculating premiums, resulting in higher costs for smokers compared to non-smokers.",
-#     "How do I calculate my insurance cost?": "You can calculate your insurance cost using our prediction system. Please provide your details such as age, sex, BMI, number of children, smoking status, and region.",
-#     "What is BMI?": "BMI stands for Body Mass Index, a measure of body fat based on height and weight. It helps assess whether you're underweight, normal weight, overweight, or obese.",
-#     "What is a smoker discount?": "A smoker discount is usually a reduction in premium offered to non-smokers. Smoking significantly impacts health risks, which in turn affects insurance costs.",
-    
-#     # Additional responses:
-#     "What factors influence insurance premiums?": "Several factors can influence insurance premiums, including your age, BMI, smoking habits, the number of dependents, and the region you live in. Insurance companies assess these factors to estimate the risk and determine the premium.",
-#     "Can I get insurance if I have pre-existing conditions?": "Yes, you can still get insurance with pre-existing conditions. However, it may result in higher premiums, as insurers may consider the risk associated with your condition.",
-#     "How often should I update my insurance information?": "It's recommended to update your insurance information whenever there is a significant change in your health, lifestyle, or family circumstances, such as changes in age, smoking habits, or the number of dependents.",
-#     "What is the difference between term insurance and whole life insurance?": "Term insurance provides coverage for a specific period, such as 10 or 20 years, and offers no cash value. Whole life insurance provides lifetime coverage and includes an investment component that builds cash value over time.",
-#     "What does deductible mean in insurance?": "A deductible is the amount you pay out-of-pocket for medical expenses before your insurance coverage kicks in. A higher deductible usually results in a lower premium, but you'll have to pay more upfront in case of a claim.",
-#     "Can I change my insurance plan?": "Yes, you can change your insurance plan, usually during an open enrollment period or after a qualifying life event (e.g., marriage, birth of a child, loss of other coverage).",
-#     "What is an insurance premium?": "An insurance premium is the amount you pay for your insurance coverage. It can be paid monthly, quarterly, or annually, and is based on factors like your risk profile, coverage amount, and policy type.",
-#     "What does 'out-of-pocket maximum' mean?": "An out-of-pocket maximum is the most you'll have to pay for covered services in a policy period (usually a year). After you reach this limit, your insurance will pay 100% of your covered expenses.",
-#     "Is health insurance mandatory?": "In many countries, health insurance is mandatory, especially for individuals who are self-employed or do not receive insurance through an employer. Laws vary by region, so it's important to check local regulations.",
-    
-#     # Add more as needed...
-# }
-
-
-# # Default fallback response
-# default_response = "I'm sorry, I didn't understand that. Could you please rephrase or ask about insurance?"
-
-# def chatbot(request):
-#     user_input = request.GET.get('user_input', '')  # Get user input from query params
-
-#     if user_input:
-#         # Combine user input with predefined responses
-#         texts = list(responses.keys()) + [user_input]
-        
-#         # Convert text to vectors using TF-IDF
-#         tfidf_vectorizer = TfidfVectorizer().fit_transform(texts)
-#         cosine_sim = cosine_similarity(tfidf_vectorizer[-1], tfidf_vectorizer[:-1])
-
-#         # Find the most similar response based on cosine similarity
-#         best_match_index = cosine_sim.argmax()
-#         best_match_score = cosine_sim[0, best_match_index]  # Similarity score of the best match
-
-#         # Set a similarity threshold
-#         threshold = 0.3
-#         if best_match_score >= threshold:
-#             response = responses[list(responses.keys())[best_match_index]]
-#         else:
-#             response = default_response
-#     else:
-#         response = "Please ask me a question."
-
-#     return JsonResponse({'response': response})
 
 from django.http import JsonResponse
 import math
+from .responses import responses
 
-# Predefined responses
-responses = {
-    "hi": "Hello! How can I assist you with insurance-related queries today?",
-    "does smoking affect my insurance costs": "Yes, smoking significantly impacts your insurance cost...",
-    "how do i calculate my insurance cost": "You can calculate your insurance cost using our prediction system...",
-    "what is bmi": "BMI stands for Body Mass Index, a measure of body fat...",
-    "what is a smoker discount": "A smoker discount is usually a reduction in premium offered to non-smokers...",
-    "what factors influence insurance premiums": "Several factors can influence insurance premiums...",
-    "can i get insurance if i have pre-existing conditions": "Yes, you can still get insurance with pre-existing conditions...",
-    "how often should i update my insurance information": "It's recommended to update your insurance information...",
-    "what is the difference between term insurance and whole life insurance": "Term insurance provides coverage for a specific period...",
-    "what does deductible mean in insurance": "A deductible is the amount you pay out-of-pocket...",
-    "can i change my insurance plan": "Yes, you can change your insurance plan...",
-    "what is an insurance premium": "An insurance premium is the amount you pay for your insurance coverage...",
-    "what does 'out-of-pocket maximum' mean": "An out-of-pocket maximum is the most you'll have to pay...",
-    "is health insurance mandatory": "In many countries, health insurance is mandatory...",
-}
 
 # Default response when no match is found
 default_response = "I'm sorry, I didn't understand that. Could you please rephrase or ask about insurance?"

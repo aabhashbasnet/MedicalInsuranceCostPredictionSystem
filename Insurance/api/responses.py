@@ -1,0 +1,30 @@
+responses = {
+    "hi": "Hello! How can I assist you with insurance-related queries today?",
+    "does smoking affect my insurance costs": "Yes, smoking significantly impacts your insurance cost...",
+    "how do i calculate my insurance cost": "You can calculate your insurance cost using our prediction system...",
+    "what is bmi": "BMI stands for Body Mass Index, a measure of body fat...",
+    "what is a smoker discount": "A smoker discount is usually a reduction in premium offered to non-smokers...",
+    "what factors influence insurance premiums": "Several factors can influence insurance premiums...",
+    "can i get insurance if i have pre-existing conditions": "Yes, you can still get insurance with pre-existing conditions...",
+    "how often should i update my insurance information": "It's recommended to update your insurance information...",
+    "what is the difference between term insurance and whole life insurance": "Term insurance provides coverage for a specific period...",
+    "what does deductible mean in insurance": "A deductible is the amount you pay out-of-pocket...",
+    "can i change my insurance plan": "Yes, you can change your insurance plan...",
+    "what is an insurance premium": "An insurance premium is the amount you pay for your insurance coverage...",
+    "what does 'out-of-pocket maximum' mean": "An out-of-pocket maximum is the most you'll have to pay...",
+    "is health insurance mandatory": "In many countries, health insurance is mandatory...",
+    
+    # Additional questions:
+    "what is the best health insurance plan": "The best health insurance plan depends on your needs, budget, and coverage preferences...",
+    "how can i lower my insurance premiums": "You can lower your premiums by increasing your deductible, maintaining a healthy lifestyle, or comparing different plans...",
+    "what is a co-pay": "A co-pay is a fixed amount you pay for a covered healthcare service, usually when you receive the service...",
+    "what is a network in health insurance": "A network is a group of doctors, hospitals, and other healthcare providers that are contracted with your insurance plan...",
+    "why is my insurance premium increasing": "Premiums may increase due to factors like age, inflation, changes in health status, or modifications to the insurance plan...",
+    "what is a waiting period in health insurance": "A waiting period is the time you must wait before certain health benefits become available under your insurance plan...",
+    "what is the difference between in-network and out-of-network": "In-network providers have contracts with your insurance company, while out-of-network providers do not...",
+    "can my insurance provider deny coverage": "Yes, your insurance provider can deny coverage if your policy does not cover certain conditions or services...",
+    "what is the role of an insurance agent": "An insurance agent helps you understand your options, choose a plan, and manage your coverage and claims...",
+    "what is a premium refund": "A premium refund is the amount returned to you by the insurer when your premiums exceed the actual cost of coverage...",
+    "can i insure my family members": "Yes, you can add family members to your health insurance policy, depending on your plan...",
+    "what is a rider in insurance": "A rider is an additional benefit or provision that can be added to your base insurance policy to customize your coverage..."
+}
