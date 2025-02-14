@@ -10,7 +10,7 @@ from .models import Insurance  # Import your Insurance model
 
 # Get the path to the pickled model file
 model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'Model', 'InsuranceCostPredictor.pkl')
-
+# model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'Model', 'InsuranceCostPredictors.pkl')
 # Load the pickled model
 model = joblib.load(model_path)
 
