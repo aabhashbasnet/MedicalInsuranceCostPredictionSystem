@@ -80,3 +80,51 @@ Link to the dataset: [Medical Insurance Dataset](https://www.kaggle.com)
 
 ## Project Structure
 
+---
+
+## Setup Instructions
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/insurance-cost-prediction.git
+   cd insurance-cost-prediction
+2. **Bckend Setup**
+python -m venv venv
+source venv/bin/activate   # For Linux/Mac
+venv\Scripts\activate      # For Windows
+
+pip install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
+3. **Frontend Setup**
+cd react-frontend
+npm install
+npm start
+4.**Start the Django Server**
+python manage.py runserver
+
+5. **Open your browser and navigate to http://127.0.0.1:8000/.**
+**Usage**
+Navigate to the home page.
+Fill out the prediction form with your details.
+Submit the form to view the predicted medical insurance cost.
+Download the prediction report as a PDF.
+Use the chatbot to get answers to common questions
+
+**Future Enhancements**
+Add user authentication for personalized dashboards.
+Extend chatbot capabilities with NLP techniques.
+Include data visualizations for user insights.
+Support additional export formats (e.g., Excel).
+Deploy the project using cloud platforms.
+
+**Contributing**
+Fork the repository.
+Create a new branch: git checkout -b feature-name.
+Commit your changes: git commit -m 'Add some feature'.
+Push to the branch: git push origin feature-name.
+Open a pull request.
+
+
+
+
