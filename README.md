@@ -96,10 +96,12 @@ venv\Scripts\activate      # For Windows
 pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py migrate
+
 3. **Frontend Setup**
 cd react-frontend
 npm install
 npm start
+
 4.**Start the Django Server**
 python manage.py runserver
 
